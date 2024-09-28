@@ -125,13 +125,14 @@ main {
                 margin-bottom: 20px;
                 text-align: center;
                 color: red;
-                text-shadow: 3px 3px 5px rgb(97, 6, 6);
+                text-shadow: 2px 2px 1px rgb(175, 19, 19);
                 animation: clignoter 1s infinite; /*clignotement infini*/
             }
             p {
                 padding-top: 20px;
                 text-align: center;
                 font-size: larger;
+                text-shadow: 3px 3px 5px rgb(97, 6, 6);
             }
             div {
                 display: flex;
@@ -159,14 +160,21 @@ main {
 }
     .a3 {
         display: flex;
-        justify-content: center;
         align-items: center;
-        background-color: lightblue;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        background-color: rgb(197, 223, 240);
         border: solid 1px lightblue;
         height: 200px;
         border-radius: 10px;
         margin: 60px;
-        font-size: larger;
+        img {
+            height: 3vh;
+        }
+        p {
+            font-size: large;
+        }
         }
     .a4 {
         display: flex;
@@ -283,7 +291,7 @@ canvas {
     margin:0%;
     img {
         flex: 1;
-        height: 1030px;
+        height: 1057px;
         min-width: fit-content;
     }
     article {

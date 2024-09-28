@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+
+#logo img  {
+    width: 150px;
+    height: 150px;
+}
+h1 span {
+    color: rgb(5, 5, 82);
+    font-family: 'Oleo Script Swash Caps', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200%;
+}
+.sticky { /*pour le JS, crée une fonction css qui fait que la nav bar ne bouge pas*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+h2 {
+    text-align: center;
+    color: rgb(5, 5, 82);
+    text-shadow: 2px 5px 2px lightgray;
+}
+.span2 {
+    color: lightskyblue;
+}
+.headcontent {
+    display: flex;
+    justify-content: space-between;
+    border: solid 3px rgb(157, 194, 230);
+    padding: 10px;
+    margin: 0px;
+    border-radius: 10px;
+    background-color: rgb(45, 121, 207);
+    height: 400px;
+    color: aliceblue;
+    font-size: x-large;
+    div:nth-child(2) {
+        display: flex;
+        align-items: center;
+        text-shadow: 15px 15px 5px blue;
+    }
+}
+div:nth-child(3) {
+    font-size: smaller;
+    padding-right: 40px;
+}
+header nav {
+    position: fixed;
+}
+main {
+    margin: 60px;
+    .a1 {
+        .text1 {
+            word-spacing: 3px;
+            background-image: linear-gradient(rgb(13, 13, 107), lightblue);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: rgb(5, 5, 82);
+            text-shadow: 2px 5px 2px lightgray;
+            }
+        }
+        .span3 {
+        text-align: center;
+        text-decoration-line: overline underline; /*soulignement surlignement*/
+        text-decoration-thickness: 3px;
+        color: rgb(5, 5, 82);
+        }
+        ul {
+        margin: 75px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+            strong {
+                color: rgb(5, 5, 82);
+            }
+            img {
+                width: 150px;
+                height: 150px;
+            }
+            li {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+            li:first-child img { /* utilisation des childs pour ne pas avoir a donner un nom aux li de ma ul*/
+            padding-bottom: 30px;
+            width: 120px;
+            height: 130px;
+            }
+            li:nth-child(2) {
+            padding-bottom: 35px;
+            }
+            li:nth-child(3) {
+                padding-bottom: 30px;
+            }
+            li:nth-child(4) img {
+                height: 130px;
+                width: 130px;
+                padding-bottom: 30px;
+            }
+            li:last-child {
+                grid-column: 2 / 3;
+                grid-row: 3;
+            }
+        }
+    }
+    .a2 {
+        word-spacing: 2px;
+        /*border: double red;*/
+        border-radius: 10px;
+        margin: 60px;
+        padding: 30px;
+        background-color: rgb(236, 146, 146);
+            h2 {
+                margin-bottom: 20px;
+                text-align: center;
+                color: red;
+                text-shadow: 3px 3px 5px rgb(97, 6, 6);
+                animation: clignoter 1s infinite; /*clignotement infini*/
+            }
+            p {
+                padding-top: 20px;
+                text-align: center;
+                font-size: larger;
+            }
+            div {
+                display: flex;
+                margin-block: 70px;
+                justify-content: space-between;
+            }
+            img { 
+                height: 250px;
+                width: 190px;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+    }
+    @keyframes clignoter {
+        0% { 
+            opacity: 1; 
+            }  /* Le texte est visible */
+        50% {
+            opacity: 0;   
+            } /* Le texte devient invisible au milieu de l'animation */
+        100% {
+            opacity: 1;
+             } /* Le texte réapparaît à la fin de l'animation */
+
+}
+    .a3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+        border: solid 1px lightblue;
+        height: 200px;
+        border-radius: 10px;
+        margin: 60px;
+        font-size: larger;
+        }
+    .a4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(170, 208, 243);
+        border: solid 1px rgb(170, 208, 243);
+        height: 200px;
+        border-radius: 10px;
+        margin: 60px;
+        font-size: larger;
+        }
+
+
+
+
+
+
+/*======================PAGE MAQUETTE3D=====================*/
+
+
+/* Bandeau défilant rouge */
+.bandeau-defilant {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(228, 134, 134); /* Couleur du fond rouge */
+    color: white; /* Couleur du texte en blanc */
+    font-size: 50px; /* Taille du texte */
+    word-spacing: 2px;
+    font-weight: bold; /* Texte en gras */
+    padding: 10px 10px; /* Espace autour du texte */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    position:relative;
+    white-space: nowrap; /* Le texte reste sur une seule ligne */
+    box-sizing: border-box;
+}
+
+.bandeau-defilant p {
+
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    animation: defilement 25s linear infinite; /* Animation qui défile */
+    }
+
+@keyframes defilement {
+    0% {
+        transform: translateX(100%); /* Démarre à droite de l'écran */
+    }
+    100% {
+        transform: translateX(-100%); /* Termine à gauche de l'écran */
+    }
+}
+
+#body3d {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #ffffff;  /* Optionnel : Couleur de fond */
+}
+.contenu3d {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;  /* Optionnel : Couleur de fond */
+    h2 {
+        color: rgb(5, 5, 82);
+        margin-top:70px;
+        margin-bottom: 70px;
+    }
+}
+
+
+#img3d {
+    margin-top: 40px;
+    width: 70%;    /* La div occupe 60% de la largeur de la page */
+    height: 100%;  /* Garde les proportions de la hauteur en fonction du contenu */
+    border: 2px solid rgb(0, 4, 255);  /* Optionnel : ajouter une bordure */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;  /* Centre le canvas à l'intérieur de la div */
+    align-items: center;  /* Centre verticalement si nécessaire */
+}
+
+canvas {
+    width: 70%;    /* Définit la largeur du canvas à 70% de la page */
+    height: auto;  /* Garde le ratio d'aspect correct */
+    border: 2px solid rgb(0, 4, 255);  /* Optionnel : ajouter une bordure */
+    border-radius: 10px;
+}
+
+
+
+
+/*===================Page INSCRIPTION====================================*/
+
+.header_inscri {
+    background: rgb(98,90,235);
+    background: linear-gradient(90deg, rgba(98,90,235,1) 0%, rgba(22,22,207,1) 7%, rgba(185,239,250,1) 78%); 
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    h1 {
+        color: white;
+    }
+}
+
+.main_inscri {
+    display: flex;
+    margin:0%;
+    img {
+        flex: 1;
+        height: 1030px;
+        min-width: fit-content;
+    }
+    article {
+        font-size: large;
+        background-color: rgb(225, 239, 245);
+        flex: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10%;
+        max-width: 100%;
+        box-sizing: border-box;
+        h2 {
+            padding-bottom: 6%;
+        }
+        }
+    button {
+            margin-top: 3px;
+            margin-bottom: 30px;
+            width: 350px;
+            height: 45px;
+            border-radius: 15px;
+            background-color: rgb(7, 38, 73);
+            color: white;
+            justify-content: center;
+        }
+    button:hover {
+        background-color: rgb(150, 190, 188);
+        box-shadow: 0px 0px 10px lightskyblue;
+    }
+    div:nth-child(2) {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            margin-bottom: 40px;
+            padding-top: 20px;
+            img {
+                height: 6vh;
+            }
+        }
+    div:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding-top: 20px;
+        margin: auto;
+        padding-right: 0;
+        p   {
+            font-size: large;
+            img {
+                height: 4vh;
+            }
+        }
+    }
+    .logo_docto {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            justify-content: center;
+    }
+}

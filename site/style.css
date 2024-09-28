@@ -4,6 +4,9 @@
     width: 150px;
     height: 150px;
 }
+/*h1 {
+    color: rgb(115, 115, 243);
+}*/
 h1 span {
     color: rgb(5, 5, 82);
     font-family: 'Oleo Script Swash Caps', 'Arial Narrow', Arial, sans-serif;
@@ -64,98 +67,101 @@ main {
             margin-bottom: 50px;
             color: rgb(5, 5, 82);
             text-shadow: 2px 5px 2px lightgray;
-            }
         }
-        .span3 {
+    }
+    .span3 {
         text-align: center;
         text-decoration-line: overline underline; /*soulignement surlignement*/
         text-decoration-thickness: 3px;
         color: rgb(5, 5, 82);
-        }
-        ul {
+    }
+    ul {
         margin: 75px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         justify-items: center;
         align-items: center;
-            strong {
+        strong {
                 color: rgb(5, 5, 82);
-            }
-            img {
+        }
+        img {
                 width: 150px;
                 height: 150px;
-            }
-            li {
+        }
+        li {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
-            }
-            li:first-child img { /* utilisation des childs pour ne pas avoir a donner un nom aux li de ma ul*/
+        }
+        li:first-child img { /* utilisation des childs pour ne pas avoir a donner un nom aux li de ma ul*/
             padding-bottom: 30px;
             width: 120px;
             height: 130px;
-            }
-            li:nth-child(2) {
+        }
+        li:nth-child(2) {
             padding-bottom: 35px;
-            }
-            li:nth-child(3) {
+        }
+        li:nth-child(3) {
                 padding-bottom: 30px;
-            }
-            li:nth-child(4) img {
+        }
+        li:nth-child(4) img {
                 height: 130px;
                 width: 130px;
                 padding-bottom: 30px;
-            }
-            li:last-child {
+        }
+        li:last-child {
                 grid-column: 2 / 3;
                 grid-row: 3;
-            }
         }
     }
-    .a2 {
-        word-spacing: 2px;
-        /*border: double red;*/
-        border-radius: 10px;
-        margin: 60px;
-        padding: 30px;
-        background-color: rgb(236, 146, 146);
-            h2 {
-                margin-bottom: 20px;
-                text-align: center;
-                color: red;
-                text-shadow: 2px 2px 1px rgb(175, 19, 19);
-                animation: clignoter 1s infinite; /*clignotement infini*/
-            }
-            p {
-                padding-top: 20px;
-                text-align: center;
-                font-size: larger;
-                text-shadow: 3px 3px 5px rgb(97, 6, 6);
-            }
-            div {
-                display: flex;
-                margin-block: 70px;
-                justify-content: space-between;
-            }
-            img { 
-                height: 250px;
-                width: 190px;
-                margin-left: 100px;
-                margin-right: 100px;
-            }
+    .pend {
+        padding-bottom: 80px;
+        border-bottom: 1px solid grey;
     }
-    @keyframes clignoter {
-        0% { 
-            opacity: 1; 
-            }  /* Le texte est visible */
-        50% {
-            opacity: 0;   
-            } /* Le texte devient invisible au milieu de l'animation */
-        100% {
-            opacity: 1;
-             } /* Le texte réapparaît à la fin de l'animation */
+}
+.a2 {
+    word-spacing: 2px;
+    /*border: double red;*/
+    border-radius: 10px;
+    margin: 60px;
+    padding: 30px;
+    background-color: rgb(236, 146, 146);
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: red;
+            text-shadow: 2px 2px 1px rgb(175, 19, 19);
+            animation: clignoter 1s infinite; /*clignotement infini*/
+        }
+        p {
+            padding-top: 20px;
+            text-align: center;
+            font-size: larger;
+        }
+        div {
+            display: flex;
+            margin-block: 70px;
+            justify-content: space-between;
+        }
+        img { 
+            height: 250px;
+            width: 190px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+}
+@keyframes clignoter {
+    0% { 
+        opacity: 1; 
+    }  /* Le texte est visible */
+    50% {
+        opacity: 0;   
+    } /* Le texte devient invisible au milieu de l'animation */
+    100% {
+        opacity: 1;
+    } /* Le texte réapparaît à la fin de l'animation */
 
 }
     .a3 {
@@ -358,5 +364,21 @@ canvas {
             height: 30px;
             text-align: center;
             justify-content: center;
+    }
+}
+
+
+
+/* =================FOOTER===============================*/
+footer {
+    img {
+        width: 22vh;
+    }
+    div {
+        display: flex;
+        align-items: center;
+        p {
+            justify-content: baseline;
+        }
     }
 }

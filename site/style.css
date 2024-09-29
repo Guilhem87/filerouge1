@@ -4,9 +4,10 @@
     width: 150px;
     height: 150px;
 }
-/*h1 {
-    color: rgb(115, 115, 243);
-}*/
+h1 {
+    justify-self: center;
+    color: rgb(255, 255, 255);
+}
 h1 span {
     color: rgb(5, 5, 82);
     font-family: 'Oleo Script Swash Caps', 'Arial Narrow', Arial, sans-serif;
@@ -38,13 +39,85 @@ h2 {
     height: 400px;
     color: aliceblue;
     font-size: x-large;
-    div:nth-child(2) {
+    .t1 {
         display: flex;
         align-items: center;
         text-shadow: 15px 15px 5px blue;
     }
-    div:nth-child(3) {
+    .seco {
         color: rgb(41, 41, 82);
+        font-size: smaller;
+        padding-right: 40px;
+    }
+    .container {
+        height: 40vh;
+        width: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    .shape1 {
+        width: 14%;
+        height: 20%;
+        transition: border-radius 1s ease-out;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        position: absolute;
+        overflow: hidden;
+        z-index: 5;
+        background-color: rgb(2, 8, 80);
+    }
+    .deco1 { 
+        width: 142%;
+        height: 142%;
+        position: absolute;
+        left: -21%;
+        top: -21%;
+        background: url(./image/squat_img.jpg);
+        background-size: 65%;
+        background-position: center center;
+        display: flex;
+        color: #003;
+        font-size: 5vw;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 1;
+        z-index: 2;
+    }
+    .deco2 { 
+        width: 140%;
+        height: 140%;
+        position: absolute;
+        left: -21%;
+        top: -21%;
+        background: url(./image/Volley_men.png);
+        background-size:69%;
+        background-position: center center;
+        display: flex;
+        color: #003;
+        font-size: 5vw;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 1;
+        z-index: 2;
+    }
+    .shape2 {
+        width: 14%;
+        height: 35%;
+        transition: border-radius 1s ease-out;
+        border-radius: 40% 60% 15% 85% / 58% 85% 15% 42%; 
+        position: absolute;
+        overflow: hidden;
+        z-index: 5;
+        background-color: rgb(2, 8, 80);
     }
 }
 div:nth-child(3) {
@@ -57,6 +130,7 @@ header nav {
 main {
     margin: 60px;
     .a1 {
+        margin-top: 100px;
         .text1 {
             word-spacing: 3px;
             background-color: rgb(13, 13, 107);
@@ -68,7 +142,7 @@ main {
         }
         h2 {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 80px;
             color: rgb(5, 5, 82);
             text-shadow: 2px 5px 2px lightgray;
         }

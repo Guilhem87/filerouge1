@@ -23,6 +23,8 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js'; // Impor
 
 // Création de la scène principale, qui contiendra tous les objets 3D
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x021330); // fond de la scene darkdarkblue
+
 
 // Création de la caméra avec une vue en perspective.
 // Le premier paramètre (75) est le champ de vision (en degrés).
@@ -60,7 +62,7 @@ img3dDiv.appendChild(renderer.domElement);
 const light = new THREE.DirectionalLight(0xffffff, 1);
 
 // Créer une lumière ambiante avec une intensité de 0.5
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.2); // Couleur blanche et intensité à 0.5
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.4); // Couleur blanche et intensité à 0.4
 scene.add(ambientLight);
 
 // Définir la position de la lumière dans la scène. Ici, elle est placée à (0, 1, 1).

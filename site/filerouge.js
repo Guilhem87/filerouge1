@@ -41,6 +41,8 @@ const renderer = new THREE.WebGLRenderer();
 // OrbitControls permet de manipuler la caméra avec la souris (orbite autour d'un point)
 // 'camera' est la caméra à manipuler, et 'renderer.domElement' est l'élément DOM où les contrôles s'appliquent.
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.maxDistance = 3;
+controls.minDistance = 1;
 
 // Définir la taille du renderer en fonction de la taille de la fenêtre.
 // Cela garantit que la scène sera rendue en occupant tout l'écran.

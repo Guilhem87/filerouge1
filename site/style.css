@@ -153,7 +153,7 @@ main {
         text-decoration-thickness: 3px;
         color: rgb(5, 5, 82);
     }
-    ul {
+    .ul_intro {
         margin: 75px;
         display: grid; /* Grid pour bien répartir mes images les unes à coté des autres 3 lignes 3colonnes */
         grid-template-columns: 1fr 1fr 1fr;

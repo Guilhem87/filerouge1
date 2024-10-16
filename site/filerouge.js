@@ -16,7 +16,7 @@ function myFunction() {
 
 // Importer les modules nécessaires de Three.js
 import * as THREE from 'three'; // Importer tout de Three.js
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'; // Importer le chargeur de fichiers GLTF
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'; // Importer le chargeur de fichiers GLTF (GL Transmission Format) est un format de fichier scènes et modèles 3D utilisant le format JSON.
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'; // Importer les contrôles de caméra OrbitControls
 
 // Initialisation de la scène, de la caméra et du renderer

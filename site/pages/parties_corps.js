@@ -1,7 +1,7 @@
 // target la div avec la classe "apropos"
 const aproposDiv = document.querySelector('#apropos');
 
-// céréation des éléments HTML
+// céréation des éléments html !
 const title = document.createElement('h3');
 title.textContent = 'Avant-propos';
 
@@ -10,7 +10,7 @@ paragraph.innerHTML = '<strong>Il est important de, tout d\'abord, savoir qu\'il
 
 const list = document.createElement('ul');
 
-const items = [ //création tableau avec objet
+const items = [ //création tableau avec objet conseil de chat GPT cela de manipuler les obets de la liste avec des eachs et on peut interchanger les objets pour changer ordre de list
     { text: ' (même brève)  Signe d’un traumatisme crânien potentiellement grave.', strong: 'Perte de conscience' },
     { text: ' Cela peut être signe de traumatisme thoracique ou de choc.', strong: 'Difficultés respiratoires' },
     { text: ' Cela peut nécessiter une immobilisation rapide et une prise en charge chirurgicale.', strong: 'Fracture visible ou déformation' },

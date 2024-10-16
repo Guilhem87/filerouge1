@@ -4,6 +4,10 @@
     width: 150px;
     height: 150px;
 }
+#logo:hover {
+    size: ;
+
+}
 h1 {
     justify-self: center;
     color: rgb(255, 255, 255);
@@ -305,6 +309,7 @@ main {
     animation: defilement 25s linear infinite; /* Animation qui défile */
     }
 
+
 @keyframes defilement {
     0% {
         transform: translateX(100%); /* Démarre à droite de l'écran */
@@ -312,6 +317,30 @@ main {
     100% {
         transform: translateX(-100%); /* Termine à gauche de l'écran */
     }
+}
+
+.bandeau-defilant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Commence en dehors du bandeau à gauche */
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,0,0,0.5) 0%, rgba(255,0,0,0) 70%); /* Effet de lumière rouge */
+    animation: lumiere 5s linear infinite; /* Animation de la lumière */
+}
+
+@keyframes lumiere {
+    0% {
+        left: -100%; /*lumière commence en dehors à gauche */
+    }
+    20% {
+        left: 100%; /* la lumiere fini de traverser la totalité en 1sec*/
+    }
+    100% {
+        left: 100%; /*la lumière traverse jusqu'à la droite */
+    }
+    
 }
 
 #body3d {

@@ -159,8 +159,8 @@ const fesse = createBodyPart('fesse', 0x00ff00, {x:-0.12, y:-0.15, z:-0.065});
 const epaule = createBodyPart('epaule', 0x00ff00, {x:-0.24, y:0.42, z:-0.005});
 const biceps = createBodyPart('biceps', 0x00ff00, {x:-0.18, y:0.35, z:0.058});
 const flechiHanche = createBodyPart('flechiHanche', 0x00ff00, {x:0.10, y:-0.09, z:0.14});
-const  abdos = createBodyPart('abdos', 0x00ff00, {x:0, y:0, z:0.17});
-const  cheville = createBodyPart('cheville', 0x00ff00, {x:-0.22, y:-0.8, z:0.004});
+const abdos = createBodyPart('abdos', 0x00ff00, {x:0, y:0, z:0.17});
+const cheville = createBodyPart('cheville', 0x00ff00, {x:-0.22, y:-0.8, z:0.004});
 const  quadri = createBodyPart('abdos', 0x00ff00, {x:-0.14, y:-0.36, z:0.10});
 const voutePied = createBodyPart('voutePied', 0x00ff00, {x:0.20, y: -0.9, z:0.010});
 
@@ -168,14 +168,14 @@ const voutePied = createBodyPart('voutePied', 0x00ff00, {x:0.20, y: -0.9, z:0.01
 const raycaster = new THREE.Raycaster(); 
 const mouse = new THREE.Vector2(); 
 
-// Écouteur d'événement pour détecter la position de la souris
+// écouteur d'événement pour détecter la position de la souris
 window.addEventListener('mousemove', (event) => {
- // Récupère les coordonnées de la souris en fonction des ***dimensions*** du canvas
+ // récupère les coordonnées de la souris en fonction des ***dimensions*** du canvas
   const canvasBounds = renderer.domElement.getBoundingClientRect();
  // Calculer les coordonnées normalisées de la souris (-1 à 1) en fonction du canvas
  mouse.x = ((event.clientX - canvasBounds.left) / canvasBounds.width) * 2 - 1;
  mouse.y = -((event.clientY - canvasBounds.top) / canvasBounds.height) * 2 + 1;
-// Met à jour le raycaster en fonction de la caméra et de la position de la souris
+// maj pour le raycaster en fonction de la caméra et de la position de la souris
     raycaster.setFromCamera(mouse, camera);
     
     passeSurZoneetChangeColorTaille(raycaster, coudeMesh, 0xff0000, 0x00ff00);
@@ -192,7 +192,7 @@ window.addEventListener('mousemove', (event) => {
     passeSurZoneetChangeColorTaille(raycaster, voutePied, 0xff0000, 0x00ff00);
 });
 
-//cf https://threejs.org/examples/?q=poin#webgl_interactive_points
+//cf https://threejs.org/examples/?q=poin#webgl_interactive_points (changement zone taille)
 
 function passeSurZoneetChangeColorTaille(raycaster, partieCorps, colorIntersect, colorNoIntersect) {
   const intersects = raycaster.intersectObject(partieCorps);
@@ -207,6 +207,8 @@ function passeSurZoneetChangeColorTaille(raycaster, partieCorps, colorIntersect,
   }
 };
 
+
+//FONCTION shema3d =====> vers pages partiescorps
 function envoyerVersLien(partieCorps, url) { window.addEventListener ('click', (event) => {
   const canvasBounds = renderer.domElement.getBoundingClientRect();
   const mouse = new THREE.Vector2();
@@ -223,10 +225,18 @@ function envoyerVersLien(partieCorps, url) { window.addEventListener ('click', (
   }
 })};
 
+//Création de tout les liens
+
 envoyerVersLien(genoux, './pages/genoux.html');
-
-
-
+envoyerVersLien(coudeMesh, '.pages/coude.html');
+envoyerVersLien(trapeze, './pages/trapeze.html');
+envoyerVersLien(basDos, './pages/basDos.html');
+envoyerVersLien(fesse, './pages/fessier.html');
+envoyerVersLien(epaule, './pages/epaule.html');
+envoyerVersLien(flechiHanche, './pages/flechiHanche');
+envoyerVersLien(abdos, './pages/abdos.html');
+envoyerVersLien(cheville, './pages/cheville.html');
+envoyerVersLien(quadri, './quad.html');
 
 
 // renderer.domElement : Cela fait référence à l'élément DOM dans lequel Three.js rend la scène. En général, c'est une balise <canvas> dans ton HTML. Cet élément représente le contexte de rendu pour ton modèle 3D.

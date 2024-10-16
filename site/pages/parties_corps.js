@@ -6,7 +6,7 @@ const title = document.createElement('h3');
 title.textContent = 'Avant-propos';
 
 const paragraph = document.createElement('p');
-paragraph.innerHTML = '<strong>Il est important de, tout d\'abord, savoir qu\'il existe une analyse des blessures et des chocs traumatiques qui indiquent les besoins d\'une intervention immédiate</strong>. <br>Certains éléments doivent immédiatement attirer ton attention car ils signalent potentiellement une situation grave, nécessitant une prise en charge rapide. Voici quelques exemples :';
+paragraph.innerHTML = '<strong>Il est important de, tout d\'abord, savoir qu\'il existe une analyse des blessures et des chocs traumatiques qui indiquent les besoins d\'une intervention immédiate</strong>. <br>Certains éléments doivent immédiatement attirer votre attention car ils signalent potentiellement une situation grave, nécessitant une prise en charge rapide. Voici quelques exemples :';
 
 const list = document.createElement('ul');
 
@@ -30,7 +30,7 @@ aproposDiv.appendChild(title);
 aproposDiv.appendChild(paragraph);
 aproposDiv.appendChild(list);
 
-// style des différents elements crées
+// css des différents elements crées
 
 aproposDiv.style.display ='flex';
 aproposDiv.style.flexDirection = 'column';

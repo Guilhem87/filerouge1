@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
-/*import police SI du t1*/
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');/*import police SI du t1*/
+
 #logo img  {
     width: 150px;
     height: 150px;
@@ -7,7 +7,7 @@
     transform-origin: center;
 }
 #logo img:hover {
-    transform: scale(1.5);
+    transform: scale(1.3) rotate(360deg); /*passage souris agrandissement de l'image et rotation de 360 deg avec pour origin le centre de l'image*/
 }
 
 h1 {
@@ -16,14 +16,14 @@ h1 {
 }
 h1 span {
     color: rgb(5, 5, 82);
-    font-family: 'Oleo Script Swash Caps', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oleo Script Swash Caps', 'Arial Narrow', Arial, sans-serif;/*importation police pour les premieres lettres(span)*/
     font-size: 200%;
 }
 .sticky { /*pour le JS, crée une fonction css qui fait que la nav bar ne bouge pas*/
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; /*etre sur que la nav bar est au premier plan*/
 }
 h2 {
     text-align: center;
@@ -33,7 +33,7 @@ h2 {
 .span2 {
     color: lightskyblue;
 }
-.headcontent {
+.headcontent {  /*=============HEADER====================================*/
     display: flex;
     justify-content: space-between;
     border: solid 3px rgb(157, 194, 230);
@@ -69,7 +69,7 @@ h2 {
         width: 14%;
         height: 20%;
         transition: border-radius 1s ease-out;
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; /*importer avec le site fancy border radius generator*/
         position: absolute;
         overflow: hidden;
         z-index: 5;

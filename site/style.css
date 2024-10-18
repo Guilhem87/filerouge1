@@ -126,6 +126,9 @@ h2 {
         background-color: rgb(2, 8, 80);
     }
 }
+
+/*===============================MAIN ACCEUIL =================================*/
+
 div:nth-child(3) {
     font-size: smaller;
     padding-right: 40px;
@@ -290,15 +293,15 @@ main {
 .bandeau-defilant {
     width: 100%;
     height: 40px;
-    background-color: rgb(228, 134, 134); /* Couleur du fond rouge */
-    color: white; /* Couleur du texte en blanc */
-    font-size: 50px; /* Taille du texte */
+    background-color: rgb(228, 134, 134); /* couleur du fond rouge */
+    color: white;
+    font-size: 50px; 
     word-spacing: 2px;
-    font-weight: bold; /* Texte en gras */
-    padding: 10px 10px; /* Espace autour du texte */
-    overflow: hidden; /* Cache le texte qui dépasse */
-    position:relative;
-    white-space: nowrap; /* Le texte reste sur une seule ligne */
+    font-weight: bold; /* gras */
+    padding: 10px 10px; /* espace autour du texte */
+    overflow: hidden; /* cache le texte qui dépasse */
+    position: relative;
+    white-space: nowrap; /*texte reste sur une seule ligne */
     box-sizing: border-box;
 }
 
@@ -308,16 +311,16 @@ main {
     width: 100%;
     display: inline-block;
     white-space: nowrap;
-    animation: defilement 25s linear infinite; /* Animation qui défile */
+    animation: defilement 25s linear infinite; /* défilement */
     }
 
 
 @keyframes defilement {
     0% {
-        transform: translateX(100%); /* Démarre à droite de l'écran */
+        transform: translateX(100%); /* début à droite de l'écran */
     }
     100% {
-        transform: translateX(-100%); /* Termine à gauche de l'écran */
+        transform: translateX(-100%); /* fini gauche de l'écran */
     }
 }
 
@@ -325,11 +328,11 @@ main {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%; /* Commence en dehors du bandeau à gauche */
+    left: -100%; /* débute en dehors du bandeau à gauche */
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(255,0,0,0) 70%); /* Effet de lumière rouge */
-    animation: lumiere 5s linear infinite; /* Animation de la lumière */
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(255,0,0,0) 50%); /*effet lumière rouge avec au centre une couleur rouge 255.0.0 et opaque a 1 a 70% du bord du cercle dégrade la couleur en rouge opaque 0*/
+    animation: lumiere 4s linear infinite; /*---- Animation de la lumière */
 }
 
 @keyframes lumiere {
@@ -349,7 +352,7 @@ main {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: #ffffff;  /* Optionnel : Couleur de fond */
+    background-color: #ffffff;
 }
 .contenu3d {
     margin: 0;
@@ -358,7 +361,7 @@ main {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #ffffff;  /* Optionnel : Couleur de fond */
+    background-color: #ffffff;
     h2 {
         color: rgb(5, 5, 82);
         margin-top:70px;
@@ -369,13 +372,12 @@ main {
 
 #img3d {
     margin-top: 40px;
-    width: 70%;    /* La div occupe 60% de la largeur de la page */
-    height: 100%;  /* Garde les proportions de la hauteur en fonction du contenu */
-    border: 2px solid rgb(0, 4, 255);  /* Optionnel : ajouter une bordure */
-    border-radius: 10px;
+    width: 70%;    /* div occupe 70% de la largeur de la page */
+    height: 100%;  /* les proportions de la hauteur sont en fonction du contenu */
+    border: 2px solid rgb(0, 4, 255);
     display: flex;
-    justify-content: center;  /* Centre le canvas à l'intérieur de la div */
-    align-items: center;  /* Centre verticalement si nécessaire */
+    justify-content: center;  /* centre le canvas à l'intérieur de la div */
+    align-items: center;  /* centre verticalement si nécessaire */
 }
 
 canvas {
@@ -477,8 +479,48 @@ canvas {
 }
 
 
+/*===============================================PARTIES CORPS++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-/* =================FOOTER===============================*/
+
+#main_corps {
+    h3 {
+        margin: 20px;
+    }
+    p {
+        padding: 5px;
+    }
+    img {
+        width: 250px;
+        height: 250px;
+        box-shadow: 0px 0px 2px rgb(200, 209, 238);
+    }
+    .div_corps1 {
+        display: flex;
+        /*flex-direction: column;*/
+        justify-content: space-evenly;
+        text-align: justify; /*aligne le texte sur les memes lignes*/
+        }
+        p {
+            width: 80%;
+        }
+        strong {
+            margin-bottom: 5px;
+        }
+    div:last-of-type {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        p {
+            text-align: justify;
+            width: 50%;
+            line-height: 2em;
+        }
+    }
+}  
+
+
+
+/* =================================================FOOTERs===========================================================*/
 footer {
     img {
         width: 22vh;

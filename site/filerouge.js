@@ -1,24 +1,7 @@
-//sticky navbar elle reste sur le haut de la page une fois que l'on navigue 
-window.onscroll = function() {myFunction()};
-
-const header = document.getElementById("header");
-const navbar = document.getElementById("navbar");
-const sticky = header.offsetHeight;
-
-function myFunction() {
-    if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-    } else {
-    navbar.classList.remove("sticky");
-    }
-}
-
-
 // Importer les modules nécessaires de Three.js
 import * as THREE from 'three'; // Importer tout de Three.js
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'; // Importer le chargeur de fichiers GLTF (GL Transmission Format) est un format de fichier scènes et modèles 3D utilisant le format JSON.
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'; // Importer les contrôles de caméra OrbitControls
-
 // Initialisation de la scène, de la caméra et du renderer
 
 // Création de la scène principale, qui contiendra tous les objets 3D
@@ -63,18 +46,18 @@ img3dDiv.appendChild(renderer.domElement);
 // La couleur de la lumière est blanche (0xffffff), et l'intensité de la lumière est définie à 1.
 const light = new THREE.DirectionalLight(0xffffff, 1);
 
-// Créer une lumière ambiante avec une intensité de 0.5
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.4); // Couleur blanche et intensité à 0.4
+// Créer une lumière ambiante avec une intensité de 0.55
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.55); // Couleur blanche et intensité à 0.4
 scene.add(ambientLight);
 
 // Définir la position de la lumière dans la scène. Ici, elle est placée à (0, 1, 1).
 // La méthode 'normalize()' permet de garder la direction de la lumière constante, indépendamment de sa distance.
 light.position.set(1, 1, 1).normalize();
-
 // Ajouter la lumière à la scène.
 scene.add(light);
-scene.add(ambientLight);
 
+const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 ); 
+scene.add( directionalLight );
 //Charger un modèle 3D au format GLTF
 //GLTFLoader est utilisé pour charger des modèles 3D au format GLTF (un format standard pour les modèles 3D légers).
 const loader = new GLTFLoader();
@@ -129,44 +112,63 @@ function animate() {
 animate();
 
 
+//===================================sticky NAVBAR=============================//
+
+
+//sticky navbar elle reste sur le haut de la page une fois que l'on navigue 
+window.onscroll = function() {myFunction()};
+
+const header = document.getElementById("header");
+const navbar = document.getElementById("navbar");
+const sticky = header.offsetHeight;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+    } else {
+    navbar.classList.remove("sticky");
+    }
+}
+
 //==============ZONE HIGHLIGHT=========================0.02// 
 
-const coudeZone = new THREE.SphereGeometry(0.01, 32, 32); // Dimensions de la sphere
-const material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: false, /*visible: false*/});
-const coudeMesh = new THREE.Mesh(coudeZone, material);
+const coudeZone = new THREE.SphereGeometry(0.01, 32, 32); // création d'une sphere avec la fonction shpereGeo qui aura 0.01 de rayon et et 32 faces (3d)
+const material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: false, /*visible: false*/}); //la couleur , wireframe = design "fil de fer"
+const coudeMesh = new THREE.Mesh(coudeZone, material); //on met dans la constante coudeMesh un nouvelle objet ds la scene 3D  qui combinera avec la "geometry" un meshbasicmaterial cad un objet "mesh" aux propriétés spéciales.
 
 scene.add(coudeMesh); // on push la zone sur le shema 3D
 
-coudeMesh.position.set(0.35, 0.25, -0.045); // Positionne la boîte sur le coude
+coudeMesh.position.set(0.35, 0.25, -0.045); // on positionne la boîte sur le coude avec les coordonnées x, y, z
 
 
-function createBodyPart(partName, color, position) {  //fonction faite pour créer des sphere qui permettront de cibler une zone 
-  const geometry = new THREE.SphereGeometry(0.01, 32, 32); // Taille et forme identiques pour toutes les parties
-  const material = new THREE.MeshBasicMaterial({ color: color, wireframe: false });
+function createBodyPart(partName, color, position) {  //fonction faite pour créer des spheres qui permettront de cibler une zone 
+  const geometry = new THREE.SphereGeometry(0.01, 32, 32); // Taille et forme identiques pour toutes les spheres crées
+  const material = new THREE.MeshBasicMaterial({ color: color, wireframe: false }); // fonction pour créer un objet basique non affecté par la lumiere, une couleur et forme simple ( mes spheres ici)
   const mesh = new THREE.Mesh(geometry, material);
-  mesh.position.set(position.x, position.y, position.z);
+  mesh.position.set(position.x, position.y, position.z); // change la localisation du mesh crée
 
   //mesh.visible = false; //masque la sphère de base.
-  scene.add(mesh);
-  return mesh;
+  scene.add(mesh); // ajoute la mesh a la scene 3d
+  return mesh; // on sort de la fonction avec un return qui va permettre d'appeler la fonction et son résultat
 }
 
  // création d'une zone pour le genoux avec la fonction createBodyPart
-const genoux = createBodyPart('genoux', 0x00ff00, {x:0.14, y: -0.5, z:0.060}); // introduction ds une constante .
-const trapeze = createBodyPart('trapeze', 0x00ff00, {x:0.07, y:0.35, z:-0.075});
-const basDos = createBodyPart('basDos', 0x00ff00, {x:0, y:0.1, z:-0.045});
-const fesse = createBodyPart('fesse', 0x00ff00, {x:-0.12, y:-0.15, z:-0.065});
-const epaule = createBodyPart('epaule', 0x00ff00, {x:-0.24, y:0.42, z:-0.005});
-const biceps = createBodyPart('biceps', 0x00ff00, {x:-0.18, y:0.35, z:0.058});
+const genoux = createBodyPart('genoux', 0x00ff00, {x:0.14, y: -0.48, z:0.060}); // introduction ds une constante .
+const trapeze = createBodyPart('trapeze', 0x00ff00, {x:0.04, y:0.35, z:-0.08});
+const basDos = createBodyPart('basDos', 0x00ff00, {x:0, y:0.1, z:-0.028});
+const fesse = createBodyPart('fesse', 0x00ff00, {x:-0.10, y:-0.15, z:-0.060});
+const epaule = createBodyPart('epaule', 0x00ff00, {x:-0.236, y:0.42, z:-0.005});
+const inserbiceps = createBodyPart('biceps', 0x00ff00, {x:-0.18, y:0.35, z:0.058});
 const flechiHanche = createBodyPart('flechiHanche', 0x00ff00, {x:0.10, y:-0.09, z:0.14});
-const abdos = createBodyPart('abdos', 0x00ff00, {x:0, y:0, z:0.17});
+const abdos = createBodyPart('abdos', 0x00ff00, {x:0, y:0, z:0.16});
 const cheville = createBodyPart('cheville', 0x00ff00, {x:-0.22, y:-0.8, z:0.004});
-const  quadri = createBodyPart('abdos', 0x00ff00, {x:-0.14, y:-0.36, z:0.10});
+const  quadri = createBodyPart('abdos', 0x00ff00, {x:-0.14, y:-0.32, z:0.116});
 const voutePied = createBodyPart('voutePied', 0x00ff00, {x:0.20, y: -0.9, z:0.010});
+const nuqueTrap = createBodyPart('trapeze', 0x00ff00, {x:-0.04, y:0.45, z:-0.06});
 
 // Variables pour le raycaster et la souris
-const raycaster = new THREE.Raycaster(); 
-const mouse = new THREE.Vector2(); 
+const raycaster = new THREE.Raycaster(); // va permettre faire une interaction entre la vue de la caméra et le placement de la souris sur un objet 3d
+const mouse = new THREE.Vector2(); // fonction de 3js qui convertir le positionnement de la souris en pixel ds un canva au départ à une valeur entre -1 et 1 que three.js pourra comprendre.
 
 // écouteur d'événement pour détecter la position de la souris
 window.addEventListener('mousemove', (event) => {
@@ -188,8 +190,9 @@ window.addEventListener('mousemove', (event) => {
     passeSurZoneetChangeColorTaille(raycaster, abdos, 0xff0000, 0x00ff00);
     passeSurZoneetChangeColorTaille(raycaster, cheville, 0xff0000, 0x00ff00);
     passeSurZoneetChangeColorTaille(raycaster, quadri, 0xff0000, 0x00ff00);
-    passeSurZoneetChangeColorTaille(raycaster, biceps, 0xff0000, 0x00ff00);
+    passeSurZoneetChangeColorTaille(raycaster, inserbiceps, 0xff0000, 0x00ff00);
     passeSurZoneetChangeColorTaille(raycaster, voutePied, 0xff0000, 0x00ff00);
+    passeSurZoneetChangeColorTaille(raycaster, nuqueTrap, 0xff0000, 0x00ff00);
 });
 
 //cf https://threejs.org/examples/?q=poin#webgl_interactive_points (changement zone taille)
@@ -237,6 +240,9 @@ envoyerVersLien(flechiHanche, './pages/flechiHanche');
 envoyerVersLien(abdos, './pages/abdos.html');
 envoyerVersLien(cheville, './pages/cheville.html');
 envoyerVersLien(quadri, './quad.html');
+envoyerVersLien(nuqueTrap, './pages/nuqueTrap');
+envoyerVersLien(voutePied, './pages/voutePied');
+envoyerVersLien(inserbiceps, './pages/insertionBiceps');
 
 
 // renderer.domElement : Cela fait référence à l'élément DOM dans lequel Three.js rend la scène. En général, c'est une balise <canvas> dans ton HTML. Cet élément représente le contexte de rendu pour ton modèle 3D.

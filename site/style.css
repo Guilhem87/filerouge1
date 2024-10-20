@@ -36,10 +36,10 @@ h2 {
 .headcontent {  /*=============HEADER====================================*/
     display: flex;
     justify-content: space-between;
-    border: solid 3px rgb(157, 194, 230);
+    /* border: solid 3px rgb(157, 194, 230); */
     padding: 10px;
     margin: 0px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background: rgb(98,90,235);
     background: linear-gradient(90deg, rgba(98,90,235,1) 0%, rgba(22,22,207,1) 7%, rgba(185,239,250,1) 78%); 
     height: 400px;
@@ -483,6 +483,7 @@ canvas {
 
 
 #main_corps {
+    padding: 60px;
     h3 {
         margin: 20px;
     }

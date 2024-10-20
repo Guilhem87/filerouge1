@@ -527,21 +527,21 @@ canvas {
 /*++++++++++++++++++++++POP UP TEST++++++++++++++*/
 
 
-/* Style for the pop-up window */
+
 #popup {
-    display: none;
+    display: none; /*la pop up est de base caché avec none*/
     position: fixed;
     z-index: 1;
-    left: 0;
+    left: 0; /*la popup sera au milieu de la page*/
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /*le fond devient sombre avec du noir non opaque*/
 }
 
-/* Style for the pop-up content */
+/* Style du pop-up content */
 #popup-content {
-    background-color: #add8e6; /* Light blue color */
+    background-color: #add8e6;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -570,7 +570,7 @@ form {
 }
 
 label {
-    display: block;
+    display: block; /*va donner l'element block et se comporter comme un h1 ou p et donc faire passer le label en dessous de l'input ou au dessus.*/
     margin: 10px 0 5px;
 }
 

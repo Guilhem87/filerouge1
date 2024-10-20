@@ -251,37 +251,83 @@ main {
     } /* Le texte réapparaît à la fin de l'animation */
 
 }
-    .a3 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        background-color: rgb(197, 223, 240);
-        border: solid 1px lightblue;
-        height: 200px;
-        border-radius: 10px;
-        margin: 60px;
-        img {
-            height: 3vh;
-        }
-        p {
-            font-size: large;
-        }
-        }
-    .a4 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(170, 208, 243);
-        border: solid 1px rgb(170, 208, 243);
-        height: 200px;
-        border-radius: 10px;
-        margin: 60px;
-        font-size: larger;
-        }
+.a3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(197, 223, 240);
+    border: solid 1px lightblue;
+    height: 200px;
+    border-radius: 10px;
+    margin: 60px;
+    img {
+        height: 3vh;
+    }
+    p {
+        font-size: large;
+    }
+}
+.a4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(170, 208, 243);
+    border: solid 1px rgb(170, 208, 243);
+    height: 200px;
+    border-radius: 10px;
+    margin: 60px;
+    font-size: larger;
+}
 
 
+.ident_bless {
+    display: inline-block;
+    text-decoration: none;
+    color: #8e44ad;
+    font-size: 22px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.ident_bless a {
+    text-decoration: none;
+    color: inherit;
+    img {
+        width: 80px;
+    }
+}
+
+.ident_bless::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scaleX(0.2);
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    color: #2ecc71;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.ident_bless:hover {
+    transform: translateY(-5px);
+    transform: scale(1.2);
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.ident_bless:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
 
 
 
@@ -478,43 +524,131 @@ canvas {
     }
 }
 
+/*++++++++++++++++++++++POP UP TEST++++++++++++++*/
+
+
+/* Style for the pop-up window */
+#popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the pop-up content */
+#popup-content {
+    background-color: #add8e6; /* Light blue color */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#close-popup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close-popup:hover,
+#close-popup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #002D72;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
 
 /*===============================================PARTIES CORPS++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
+.contenuTxt p:first-of-type {
+    margin-left: 10%;
+}
 
 #main_corps {
-    padding: 60px;
-    h3 {
-        margin: 20px;
-    }
-    p {
-        padding: 5px;
-    }
-    img {
-        width: 250px;
-        height: 250px;
-        box-shadow: 0px 0px 2px rgb(200, 209, 238);
-    }
-    .div_corps1 {
+    .contenuTxt {
+        font-size: large;
         display: flex;
-        /*flex-direction: column;*/
-        justify-content: space-evenly;
-        text-align: justify; /*aligne le texte sur les memes lignes*/
+        flex-direction: column;
+        padding: 100px;
+        p:first-of-type {
+            margin-bottom: 5%;
+            /* justify-content: center; je ne sais pas pourquoi ces lignes ne marchent pas
+            justify-self: center; */
+        }
+        h3 {
+            margin: 20px;
         }
         p {
-            width: 80%;
+            padding: 5px;
         }
-        strong {
-            margin-bottom: 5px;
+        img {
+            width: 250px;
+            height: 280px;
+            box-shadow: 0px 0px 2px rgb(200, 209, 238);
         }
-    div:last-of-type {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        p {
-            text-align: justify;
-            width: 50%;
-            line-height: 2em;
+        .div_corps1 {
+            display: flex;
+            /*flex-direction: column;*/
+            justify-content: space-evenly;
+            text-align: justify; /*aligne le texte sur les memes lignes*/
+            }
+            p {
+                width: 80%;
+                padding-right: 15px;
+            }
+            strong {
+                margin-bottom: 5px;
+            }
+        div:last-of-type {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            p {
+                text-align: justify;
+                width: 50%;
+                line-height: 150%;
+            }
         }
     }
 }  

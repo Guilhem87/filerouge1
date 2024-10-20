@@ -39,6 +39,7 @@ aproposDiv.style.marginBottom = "5%";
 aproposDiv.style.marginTop = "5%";
 aproposDiv.style.borderBottom = '1px solid rgb(206, 206, 206)';
 aproposDiv.style.borderTop = '1px solid rgb(206, 206, 206)';
+aproposDiv.style.marginBottom = '0px';
 //aproposDiv.style.textAlign ='center';
 
 title.style.fontSize = '24px';
@@ -54,7 +55,7 @@ paragraph.style.color = '#555';
 paragraph.style.textAlign = 'center';
 paragraph.style.marginBottom ='2%'
 paragraph.style.textAlign = 'justify';
-paragraph.style.paddingLeft = '20%';
+paragraph.style.paddingLeft = '10%';
 
 list.style.listStyleType = 'circle'; //'disc' de base valeur des puces de la list
 list.style.marginLeft = '23%';

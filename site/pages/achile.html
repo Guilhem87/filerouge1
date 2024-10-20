@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nuque</title>
+    <title>SI_Genoux</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body>
+<body id="body_corps">
     <header id="header" class="headcontent">
         <div id="logo">
-            <a href="../filerouge.html"><img src="../image/logo.png" alt="logo"></a>
+                <a href="../filerouge.html"><img src="../image/logo.png" alt="logo"></a>
         </div>
         <div class="t1">
-            <h1><strong><span>S</span>port <span>I</span>njury</strong></h1>
+                <h1><strong><span>S</span>port <span>I</span>njury</strong></h1>
         </div>
         <div class="seco">
-            <p><a href="./inscription/inscription.html">Se connecter</a></p>   
+            <p><a href="../inscription/inscription.html">Se connecter</a></p>   
         </div>
     </header>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
@@ -48,11 +48,12 @@
                             <li><a class="dropdown-item" href="#">Coup</a></li>
                             <li><a class="dropdown-item" href="#">Quadriceps</a></li>
                             <li><a class="dropdown-item" href="#">biceps</a></li>
+                            <li><a class="dropdown-item" href="./trapeze.html">Les Trapèzes</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled text-white" href="../inscription/inscription.html">Se connecter</a>
+                        <a class="nav-link text-white" href="../inscription/inscription.html">Se connecter</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -70,8 +71,35 @@
             Pour tout diagnostic, prenez rendez-vous avec votre médecin traitant.</p>
         </div>
     </div>
+    <main id="main_corps">
+        <h2><strong>LE TENDON D'ACHILLE</strong></h2>
+        <div id="apropos"></div>
+        <!--<h3>Avant-propos.</h3>
+        <p><strong>Il est important de tout d'abord savoir qu'au niveau médical il existe une analyse des blessures et des choques traumatiques qui indiquent les besoins d'une intervention immédiate</strong>. </br>  
+        Certains éléments doivent immédiatement attirer ton attention car ils signalent potentiellement une situation grave, nécessitant une prise en charge rapide. Voici quelques exemples :
+            <ul>
+                <li><strong>Perte de conscience</strong> (même brève) : Signe d’un traumatisme crânien potentiellement grave.</li>
+                <li><strong>Difficultés respiratoires</strong> : Cela peut être signe de traumatisme thoracique ou de choc.</li>
+                <li><strong>Fracture visible ou déformation</strong> : Cela peut nécessiter une immobilisation rapide et une prise en charge chirurgicale.</li>
+                <li><strong>Hémorragie sévère</strong> : Un saignement abondant doit être traité rapidement pour éviter un choc hémorragique.</li>
+                <li><strong>Douleur intense et résistante aux mouvements</strong> : Indique potentiellement une fracture ou un autre dommage interne significatif.</li>
+            </ul>
+        </p>-->
+        <div class="contenuTxt">
+            
+        </div>
+    </main>
+    <footer>
+        <div>
+            <img src="../image/Logo_SI-removebg.png" alt="logo_SI"><p>Copyright © 2024 SportInjury, tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="parties_corps.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="module" src="../filerouge.js" ></script><!--script jquery= maquette 3D/ Script2=js barreNav / Script3= bootstrap 5.1.3 /script4 = bendeau déroulant-->
     <script src="../filerouge.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+
 </body>
 </html>

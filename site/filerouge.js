@@ -166,6 +166,7 @@ const  quadri = createBodyPart('abdos', 0x00ff00, {x:-0.14, y:-0.32, z:0.116});
 const voutePied = createBodyPart('voutePied', 0x00ff00, {x:0.20, y: -0.9, z:0.010});
 const nuqueTrap = createBodyPart('trapeze', 0x00ff00, {x:-0.04, y:0.45, z:-0.06});
 
+
 // Variables pour le raycaster et la souris
 const raycaster = new THREE.Raycaster(); // va permettre faire une interaction entre la vue de la caméra et le placement de la souris sur un objet 3d
 const mouse = new THREE.Vector2(); // fonction de 3js qui convertir le positionnement de la souris en pixel ds un canva au départ à une valeur entre -1 et 1 que three.js pourra comprendre.
@@ -236,13 +237,14 @@ envoyerVersLien(trapeze, './pages/trapeze.html');
 envoyerVersLien(basDos, './pages/basDos.html');
 envoyerVersLien(fesse, './pages/fessier.html');
 envoyerVersLien(epaule, './pages/epaule.html');
-envoyerVersLien(flechiHanche, './pages/flechiHanche');
+envoyerVersLien(flechiHanche, './pages/psoas.html');
 envoyerVersLien(abdos, './pages/abdos.html');
 envoyerVersLien(cheville, './pages/cheville.html');
-envoyerVersLien(quadri, './quad.html');
-envoyerVersLien(nuqueTrap, './pages/nuqueTrap');
-envoyerVersLien(voutePied, './pages/voutePied');
-envoyerVersLien(inserbiceps, './pages/insertionBiceps');
+envoyerVersLien(quadri, './pages/quad.html');
+envoyerVersLien(nuqueTrap, './pages/nuque.html');
+envoyerVersLien(voutePied, './pages/voutePied.html');
+envoyerVersLien(inserbiceps, './pages/insertionBiceps.html');
+
 
 
 // renderer.domElement : Cela fait référence à l'élément DOM dans lequel Three.js rend la scène. En général, c'est une balise <canvas> dans ton HTML. Cet élément représente le contexte de rendu pour ton modèle 3D.

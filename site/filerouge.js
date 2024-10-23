@@ -42,7 +42,7 @@ img3dDiv.appendChild(renderer.domElement);
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
 // Ajouter une source de lumière
-// DirectionalLight simule la lumière du soleil, avec une lumière qui éclaire dans une direction donnée.
+
 // La couleur de la lumière est blanche (0xffffff), et l'intensité de la lumière est définie à 1.
 const light = new THREE.DirectionalLight(0xffffff, 1);
 
@@ -55,7 +55,7 @@ scene.add(ambientLight);
 light.position.set(1, 1, 1).normalize();
 // Ajouter la lumière à la scène.
 scene.add(light);
-
+// DirectionalLight simule la lumière du soleil, avec une lumière qui éclaire dans une direction donnée.
 const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 ); 
 scene.add( directionalLight );
 //Charger un modèle 3D au format GLTF

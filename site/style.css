@@ -420,7 +420,8 @@ main {
     margin-top: 40px;
     width: 70%;    /* div occupe 70% de la largeur de la page */
     height: 100%;  /* les proportions de la hauteur sont en fonction du contenu */
-    border: 2px solid rgb(0, 4, 255);
+    border: 1rem solid rgb(0, 4, 255);
+    border-radius: 10px;
     display: flex;
     justify-content: center;  /* centre le canvas à l'intérieur de la div */
     align-items: center;  /* centre verticalement si nécessaire */
@@ -430,7 +431,7 @@ canvas {
     width: 70%;    /* Définit la largeur du canvas à 70% de la page */
     height: auto;  /* Garde le ratio d'aspect correct */
     border: 2px solid rgb(0, 4, 255);  /* Optionnel : ajouter une bordure */
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 

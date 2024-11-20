@@ -1,7 +1,7 @@
 // target la div avec la classe "apropos"
 const aproposDiv = document.querySelector('#apropos');
 
-// céréation des éléments html !
+// céréation des élém html
 const title = document.createElement('h3');
 title.textContent = 'Avant-propos';
 
@@ -10,7 +10,7 @@ paragraph.innerHTML = '<strong>Il est important de, tout d\'abord, savoir qu\'il
 
 const list = document.createElement('ul');
 
-const items = [ //création tableau avec objet conseil de chat GPT cela de manipuler les obets de la liste avec des eachs et on peut interchanger les objets pour changer ordre de list
+const items = [ //création tableau avec objet conseil de chat GPT cela permet de manipuler les obets de la liste avec des eachs et on peut interchanger les objets pour changer ordre de list
     { text: ' (même brève)  Signe d’un traumatisme crânien potentiellement grave.', strong: 'Perte de conscience' },
     { text: ' Cela peut être signe de traumatisme thoracique ou de choc.', strong: 'Difficultés respiratoires' },
     { text: ' Cela peut nécessiter une immobilisation rapide et une prise en charge chirurgicale.', strong: 'Fracture visible ou déformation' },
@@ -18,7 +18,7 @@ const items = [ //création tableau avec objet conseil de chat GPT cela de manip
     { text: ' Indique potentiellement une fracture ou un autre dommage interne significatif.', strong: 'Douleur intense et résistante aux mouvements' }
 ];
 
-// items de la liste
+// items de liste
 items.forEach(item => {
     const li = document.createElement('li');
     li.innerHTML = `<strong>${item.strong}</strong> : ${item.text}`;
@@ -30,7 +30,7 @@ aproposDiv.appendChild(title);
 aproposDiv.appendChild(paragraph);
 aproposDiv.appendChild(list);
 
-// css des différents elements crées
+// css des elements crées
 
 aproposDiv.style.display ='flex';
 aproposDiv.style.flexDirection = 'column';

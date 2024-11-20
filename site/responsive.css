@@ -1,0 +1,197 @@
+/* +++++++++++ responsive tablette ++++++++++++ */
+
+@media (max-width: 1024px) {
+    .bandeau-defilant {
+        font-size: 20px; /* Réduit la taille de police pour les tablettes */
+        padding: 15px 10px; /* Ajuste le padding pour mieux s'adapter à la taille de l'écran */
+    }
+
+    .contenu3d {
+        margin-top: 20px;
+    }
+
+    .contenu3d h2 {
+        margin-top: 50px; /* Réduit l'espacement pour mieux utiliser l'espace vertical */
+    }
+
+    #img3d {
+        width: 80%; /* Réduit la taille du conteneur à 80% pour les tablettes */
+    }
+
+    canvas {
+        width: 80%; /* Réduit la taille du canvas à 80% */
+    }
+}
+
+@media (max-width: 768px) {
+    .shape1, .shape2 {
+        display: none;
+    }
+    .headcontent {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 20rem;
+    }
+    .box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .ul_intro {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        li {
+            width: 50%;
+            padding: 5px;
+        }
+    }
+    .bandeau-defilant {
+        font-size: 14px; /* Réduit encore la taille de la police pour les petits écrans */
+        padding: 10px 5px; /* Réduit le padding pour les smartphones */
+    }
+
+    .contenu3d h2 {
+        font-size: 1.5rem; /* Réduit la taille du titre */
+        margin-top: 40px;
+    }
+
+    #img3d {
+        width: 90%; /* Réduit la largeur du conteneur à 90% */
+        margin-top: 30px; /* Un peu plus d'espace en haut */
+    }
+
+    canvas {
+        width: 90%; /* Réduit la largeur du canvas à 90% */
+    }
+    .bandeau-defilant p {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        white-space: nowrap;
+        animation: defilement 15s linear infinite; /* Défilement */
+    }
+    
+    @keyframes defilement {
+        0% {
+            transform: translateX(100%); /* debut à droite de l'écran */
+        }
+        100% {
+            transform: translateX(-100%); /* fini à gauche de l'écran */
+        }
+    }
+}
+
+/* ++++++++++++++++++ R smartphone +++++++++++++ */
+@media (max-width: 480px) {
+    main {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        .a1 {
+            width: 100%;
+            max-width: 100%;
+        }
+
+    }
+    .headcontent {
+        justify-content: flex-start;
+        height: 15rem;
+    }
+    body {
+        background-color: blue;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .t1 {
+        font-size: medium;
+    }
+    .container {
+        width: 100%;
+        height: auto;
+    }
+    .shape1, .shape2 {
+        display: none;
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+    .deco1, .deco2 {
+        font-size: 3vw;
+        display: none;
+    }
+    .ul_intro {
+        grid-template-columns: 2fr;
+        grid-template-rows: auto;
+        padding: 0px;
+        margin: 0px;
+        li:first-child {
+            width: 100%;
+            height: auto;
+            font-size: 50%;
+        }
+    }
+    .a1 {
+        margin: 0px;
+    }
+    .a2, .a3, .a4 {
+        margin: 20px;
+        padding: 15px;
+    }
+    .a2 img {
+        height: 150px;
+        width: 100px;
+        margin: 0;
+    }
+    .a3 img {
+        height: 2vh;
+    }
+    .a3 p {
+        font-size: medium;
+    }
+    .a4 {
+        font-size: medium;
+    }
+    /*.bandeau-defilant {
+        font-size: 3vw; /* reduit encore la taille de la police pour les très petits écrans 
+        p {
+            font-size: 0.7rem;
+            display: inline-block;
+            white-space: nowrap; 
+        }
+    }*/
+
+    @keyframes defilement {
+        0% {
+            transform: translateX(100%); /* début à droite de l'écran */
+        }
+        100% {
+            transform: translateX(-100%); /* fini gauche de l'écran */
+        }
+    }
+
+    .contenu3d h2 {
+        font-size: 1.2rem; /* reduit encore la taille du titre */
+        margin-top: 30px;
+    }
+
+    #img3d {
+        width: 95%; /* reduit la largeur du conteneur à 95% */
+        margin-top: 20px;
+    }
+
+    canvas {
+        width: 95%; /* reduit la largeur du canvas à 95% */
+    }
+    .bandeau-defilant p {
+        font-size: 0.7rem;
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        white-space: nowrap;
+        animation: defilement 8s linear infinite; /* defilement + rapide car fenetre + petite */
+    }
+}

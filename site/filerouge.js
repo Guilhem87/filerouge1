@@ -130,7 +130,7 @@ function myFunction() {
     }
 }
 
-//==============ZONE HIGHLIGHT=========================0.02// 
+//==============ZONE HIGHLIGHT=========================// 
 
 const coudeZone = new THREE.SphereGeometry(0.01, 32, 32); // création d'une sphere avec la fonction shpereGeo qui aura 0.01 de rayon et et 32 faces (3d)
 const material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: false, /*visible: false*/}); //la couleur , wireframe = design "fil de fer"
@@ -198,7 +198,7 @@ window.addEventListener('mousemove', (event) => {
 
 //cf https://threejs.org/examples/?q=poin#webgl_interactive_points (changement zone taille)
 
-function passeSurZoneetChangeColorTaille(raycaster, partieCorps, colorIntersect, colorNoIntersect) {
+function passeSurZoneetChangeColorTaille(raycaster, partieCorps, colorIntersect, colorNoIntersect) {//passage sur les spheres et elles changent de couleurs
   const intersects = raycaster.intersectObject(partieCorps);
   if (intersects.length > 0) {
     //partieCorps.visible = true; // affichera la sphere au passage de la souris

@@ -19,7 +19,7 @@ h1 span {
     font-family: 'Oleo Script Swash Caps', 'Arial Narrow', Arial, sans-serif;/*importation police pour les premieres lettres(span)*/
     font-size: 200%;
 }
-.sticky { /*pour le JS, crée une fonction css qui fait que la nav bar ne bouge pas*/
+.sticky { /*pour le JS cela crée une fonction css qui fait que la nav bar ne bouge pas*/
     position: fixed;
     top: 0;
     width: 100%;
@@ -125,6 +125,12 @@ h2 {
         z-index: 5;
         background-color: rgb(2, 8, 80);
     }
+}
+
+.navbar .nav-link, .navbar .navbar-brand, .navbar .form-control, .navbar .btn {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 8px 0; /* Ajustez selon vos besoins */
 }
 
 /*===============================MAIN ACCEUIL =================================*/
@@ -340,8 +346,7 @@ main {
     width: 100%;
     height: 40px;
     background-color: rgb(228, 134, 134); /* couleur du fond rouge */
-    color: white;
-    font-size: 50px; 
+    color: white; 
     word-spacing: 2px;
     font-weight: bold; /* gras */
     padding: 10px 10px; /* espace autour du texte */
@@ -349,10 +354,13 @@ main {
     position: relative;
     white-space: nowrap; /*texte reste sur une seule ligne */
     box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .bandeau-defilant p {
-
+    font-size: 1.1rem;
     position: relative;
     width: 100%;
     display: inline-block;
@@ -420,7 +428,7 @@ main {
     margin-top: 40px;
     width: 70%;    /* div occupe 70% de la largeur de la page */
     height: 100%;  /* les proportions de la hauteur sont en fonction du contenu */
-    border: 1rem solid rgb(0, 4, 255);
+    border: 0.65rem solid rgb(0, 4, 255);
     border-radius: 10px;
     display: flex;
     justify-content: center;  /* centre le canvas à l'intérieur de la div */
@@ -611,7 +619,7 @@ button[type="submit"]:hover {
         font-size: large;
         display: flex;
         flex-direction: column;
-        padding: 100px;
+        padding: clamp(2rem, 5vw, 6.25rem);
         p:first-of-type {
             margin-bottom: 5%;
             /* justify-content: center; je ne sais pas pourquoi ces lignes ne marchent pas
